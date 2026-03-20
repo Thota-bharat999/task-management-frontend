@@ -13,7 +13,7 @@ A **Full Stack Role-Based Task Management Application** that allows teams to cre
 
 ## 🌐 Live Demo
 
-- 🔗 Frontend: *(Add Vercel Link After Deployment)*
+- 🔗 Frontend:https://bharattaskmanagement.netlify.app/
 - 🔗 Backend API: https://task-management-backend-e22p.onrender.com
 
 ---
@@ -68,16 +68,19 @@ This system provides a centralized platform to manage tasks with proper ownershi
 ## 📸 Screenshots
 
 ### 🔐 Login Page
-*(Add Screenshot Here)*
+assets/login.png
+
 
 ### 📊 Dashboard
-*(Add Screenshot Here)*
+
+assets/dashboard.png
+
 
 ### 📋 Task List
-*(Add Screenshot Here)*
+assets/taskList.png
 
 ### 📝 Create Task
-*(Add Screenshot Here)*
+assets/createTask.png
 
 ---
 

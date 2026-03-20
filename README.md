@@ -64,23 +64,19 @@ This system provides a centralized platform to manage tasks with proper ownershi
 - Express Validator
 
 ---
-
 ## 📸 Screenshots
 
 ### 🔐 Login Page
-assets/login.png
-
+![Login](src/assets/login.png)
 
 ### 📊 Dashboard
-
-assets/dashboard.png
-
+![Dashboard](src/assets/dashboard.png)
 
 ### 📋 Task List
-assets/taskList.png
+![Task List](src/assets/taskList.png)
 
 ### 📝 Create Task
-assets/createTask.png
+![Create Task](src/assets/createTask.png)
 
 ---
 

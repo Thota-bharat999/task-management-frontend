@@ -23,7 +23,7 @@ function TaskModal({ task, mode, onClose, onUpdated }) {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await apiRequest(
+      const data = await apiRequest(
         `${BASE_URL}/tasks/${task._id}`,
         {
           method: "PATCH",
@@ -35,14 +35,8 @@ function TaskModal({ task, mode, onClose, onUpdated }) {
         }
       );
 
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.message || "Update failed");
-      }
-
       toast.success("Task updated successfully");
-      onUpdated(data.data);
+      onUpdated(data.data ?? data);
       onClose();
     } catch (error) {
       toast.error(error.message);

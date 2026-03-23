@@ -23,7 +23,7 @@ function CreateTask() {
 
       const token = localStorage.getItem("token");
 
-      const response = await apiRequest("/tasks/task", {
+      await apiRequest("/tasks/task", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -38,12 +38,6 @@ function CreateTask() {
           dueDate,
         }),
       });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "Failed to create task");
-      }
 
       toast.success("Task created successfully");
       navigate("/tasks");

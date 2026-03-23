@@ -45,56 +45,81 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-400">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Login
-        </h2>
 
-        {error && (
-          <p className="text-red-500 text-sm text-center mb-4">
-            {error}
-          </p>
-        )}
+  <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-indigo-100 flex flex-col">
 
-        <div className="space-y-4">
-          {/* Email */}
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-          />
+```
+{/* ⭐ App Header */}
+<div className="text-center py-6">
+  <h1 className="text-3xl font-bold text-blue-700">
+    Task Management App
+  </h1>
+  <p className="text-gray-500 text-sm mt-1">
+    Smart workflow • Role based access • Productivity boost
+  </p>
+</div>
 
-          {/* Password */}
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-          />
+{/* ⭐ Login Card */}
+<div className="flex flex-1 items-center justify-center px-4">
+  <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
 
-          {/* Button */}
-         <button
-  onClick={handleLogin}
-  disabled={loading}
-  className="w-full bg-blue-600 text-white py-2 rounded-md flex justify-center items-center gap-2 disabled:opacity-50"
->
-  {loading ? <Spinner /> : "Login"}
-</button>
-        </div>
+    <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
+      Welcome Back 👋
+    </h2>
 
-        <p className="text-sm text-center text-gray-600 mt-4">
-          Don’t have an account?{" "}
-          <Link to="/register" className="text-blue-600 hover:underline">
-            Register
-          </Link>
-        </p>
-      </div>
+    {error && (
+      <p className="text-red-500 text-sm text-center mb-4 bg-red-50 py-2 rounded">
+        {error}
+      </p>
+    )}
+
+    <div className="space-y-4">
+
+      {/* Email */}
+      <input
+        type="email"
+        placeholder="Enter your email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none transition"
+      />
+
+      {/* Password */}
+      <input
+        type="password"
+        placeholder="Enter your password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none transition"
+      />
+
+      {/* Button */}
+      <button
+        onClick={handleLogin}
+        disabled={loading}
+        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg flex justify-center items-center gap-2 transition disabled:opacity-50"
+      >
+        {loading ? <Spinner /> : "Login"}
+      </button>
     </div>
-  );
+
+    <p className="text-sm text-center text-gray-600 mt-6">
+      Don’t have an account?{" "}
+      <Link
+        to="/register"
+        className="text-blue-600 font-medium hover:underline"
+      >
+        Register
+      </Link>
+    </p>
+
+  </div>
+</div>
+```
+
+  </div>
+);
+
 }
 
 export default Login;
